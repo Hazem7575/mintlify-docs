@@ -1,10 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": {
-    "light": "light",
-    "dark": "dark"
-  },
-  "name": "Zatca Documentation",
+  "theme": "mint",
+  "name": "Mint Starter Kit",
   "colors": {
     "primary": "#16A34A",
     "light": "#22C55E",
@@ -16,9 +13,6 @@
       "from": "#16A34A",
       "to": "#22C55E"
     }
-  },
-  "styling" : {
-    "codeblocks" : "system"
   },
   "favicon": "/favicon.svg",
   "navigation": {
