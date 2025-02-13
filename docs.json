@@ -1,35 +1,65 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": {
+    "light": "light",
+    "dark": "dark"
+  },
+  "name": "Zatca Documentation",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#22C55E",
+    "dark": "#15803D",
+    "background": {
+      "dark": "#111827"
+    },
+    "anchors": {
+      "from": "#16A34A",
+      "to": "#22C55E"
+    }
+  },
+  "styling" : {
+    "codeblocks" : "system"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Getting Started",
             "pages": [
               "introduction",
               "quickstart",
-              "development"
+              "installation",
+              "configuration"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Basic Usage",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "basic-usage/device-registration",
+              "basic-usage/invoice-creation",
+              "basic-usage/invoice-submission",
+              "basic-usage/status-management"
+            ]
+          },
+          {
+            "group": "Advanced Usage",
+            "pages": [
+              "advanced-usage/customization",
+              "advanced-usage/error-handling",
+              "advanced-usage/qr-codes",
+              "advanced-usage/compliance"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/migrating",
+              "guides/troubleshooting",
+              "guides/best-practices",
+              "guides/security"
             ]
           }
         ]
@@ -38,17 +68,57 @@
         "tab": "API Reference",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Core Concepts",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/overview",
+              "api-reference/authentication",
+              "api-reference/errors"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Device API",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+              "api-reference/device/register",
+              "api-reference/device/activate",
+              "api-reference/device/status"
+            ]
+          },
+          {
+            "group": "Invoice API",
+            "pages": [
+              "api-reference/invoice/create",
+              "api-reference/invoice/submit",
+              "api-reference/invoice/status",
+              "api-reference/invoice/validation"
+            ]
+          },
+          {
+            "group": "Data Models",
+            "pages": [
+              "api-reference/models/device",
+              "api-reference/models/invoice",
+              "api-reference/models/company"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
+          {
+            "group": "Support",
+            "pages": [
+              "resources/faq",
+              "resources/changelog",
+              "resources/support"
+            ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "resources/terms",
+              "resources/privacy",
+              "resources/license"
             ]
           }
         ]
@@ -57,19 +127,19 @@
     "global": {
       "anchors": [
         {
+          "anchor": "GitHub",
+          "href": "https://github.com/yourusername/zatca",
+          "icon": "github"
+        },
+        {
+          "anchor": "Support",
+          "href": "https://github.com/yourusername/zatca/issues",
+          "icon": "life-ring"
+        },
+        {
           "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "href": "/",
+          "icon": "book-open"
         }
       ]
     }
@@ -81,21 +151,36 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "API Reference",
+        "href": "/api-reference/overview"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/yourusername/zatca",
+        "icon": "github"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "/quickstart"
     }
   },
   "footer": {
+    "copyright": "© 2024 Your Name. All rights reserved.",
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/yourusername/zatca"
+    }
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    }
+  },
+  "integrations": {
+    "intercom": "xxx",
+    "clarity": {
+      "projectId": "xxxxxxxx"
     }
   }
 }
